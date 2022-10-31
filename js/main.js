@@ -1,7 +1,12 @@
 const select = document.querySelectorAll('select');
 const watchTime = document.querySelector('.watch-time h1');
+const setAlarm = document.querySelector('.alarm-btn');
+const content = document.querySelector('.select-time');
 
-for (let i = 12; i >= 0; i--) {
+let alarmTime;
+let isAlarmSet = false;
+let ringtone = new Audio('../css/assets/ringtone.mp3');
+for (let i = 12; i > 0; i--) {
 
     i = i < 10 ? '0' + i : i;
 
@@ -12,7 +17,7 @@ for (let i = 12; i >= 0; i--) {
 }
 
 
-for (let i = 59; i >= 0; i--) {
+for (let i = 59; i > 0; i--) {
 
     i = i < 10 ? '0' + i : i;
 
@@ -52,6 +57,58 @@ setInterval(() => {
 
     s = s < 10 ? '0' + s : s;
 
-    watchTime.innerText =  `${h}:${m}:${s}:${amPm}`;
+    watchTime.innerHTML = `${h}:${m}:${s} ${amPm}`;
+
+    if (alarmTime == `${h}:${m} ${amPm}`) {
+        ringtone.play();
+        ringtone.loop = true;
+    }
+
 
 }, 1000);
+
+
+setAlarm.addEventListener('click', () => {
+
+    if (isAlarmSet) {
+        alarmTime = '';
+        ringtone.pause();
+        content.classList.remove('disabled');
+        setAlarm.innerHTML = 'Set Alarm';
+        select[0].value = 'Hour';
+        select[1].value = 'Minute';
+        select[2].value = 'AM/PM';
+        return isAlarmSet = false;
+    }
+
+    const time = `${select[0].value}:${select[1].value} ${select[2].value}`;
+
+    if ((time.includes('Hour') && time.includes('Minute') && time.includes('AM/PM'))) {
+        return alert('Please set your alarm!');
+    }
+    else if ((time.includes('Hour') && time.includes('Minute'))) {
+        return alert('Please set your Hour & Minute!');
+    }
+    else if ((time.includes('Hour') && time.includes('AM/PM'))) {
+        return alert('Please set your Hour & AM/PM');
+    }
+    else if ((time.includes('Minute') && time.includes('AM/PM'))) {
+        return alert('Please set your Minute & AM/PM');
+    }
+    else if(time.includes('Hour')){
+        return alert('Please set hour!');
+    }
+    else if(time.includes('Minute')){
+        return alert('Please set minute!');
+    }
+    else if(time.includes('AM/PM')){
+        return alert('Please set AM/PM');
+    }
+
+    isAlarmSet = true;
+    alarmTime = time;
+    content.classList.add('disabled');
+    setAlarm.innerHTML = 'Clear Alarm';
+
+});
+
