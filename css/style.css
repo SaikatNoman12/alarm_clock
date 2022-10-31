@@ -1,0 +1,164 @@
+/* -- google font link -- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* -- 
+global css start
+-- */
+:root {
+    --font-poppins: 'Poppins', sans-serif;
+
+    --color-white: rgb(255, 255, 255);
+    --color-black: rgb(0, 0, 0);
+    --color-black1: #222;
+    --color-black2: #999;
+
+    --color-gray: rgb(128, 128, 128);
+    --color-primary: #7380ec;
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-blue: #287bff;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: var(--font-poppins);
+    appearance: none;
+    outline: 0;
+    list-style: none;
+    border: 0;
+}
+
+body {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    font-family: var(--font-poppins);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--color-background);
+    user-select: none;
+    color: var(--color-dark);
+    overflow-x: hidden;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: var(--color-dark);
+    cursor: pointer;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    display: block;
+    margin: 0px !important;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 0.87rem;
+}
+
+h4 {
+    font-size: 0.8rem;
+}
+
+h5 {
+    font-size: 0.77rem;
+}
+
+p {
+    color: var(--color-dark-variant);
+}
+
+b {
+    color: var(--color-dark);
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.small {
+    font-size: 0.75rem;
+}
+
+.profile-photo {
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.text-muted {
+    color: var(--color-info-dark);
+}
+
+.primary {
+    color: var(--color-primary) !important;
+}
+
+.danger {
+    color: var(--color-danger) !important;
+}
+
+.warning {
+    color: var(--color-warning) !important;
+}
+
+.success {
+    color: var(--color-success);
+}
+
+/* -- 
+global css end
+-- */
+
+
+/* -- 
+custom css link
+-- */
+
+
+
+/* -- 
+custom css link
+-- */
