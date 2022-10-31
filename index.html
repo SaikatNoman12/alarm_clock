@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,13 +14,66 @@
     <!-- title -->
     <title>Alarm Clock</title>
 </head>
+
 <body>
-    
-    
+
+    <main>
+        <div class="container">
+
+            <div class="my-clock">
+                <div class="clock">
+                    <div class="clock-image">
+                        <img src="./css/assets/clock.svg" alt="clock">
+                    </div>
+                    <div class="watch-time">
+                        <h1>04:20:30 PM</h1>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="select-time">
+                        <div class="column-select">
+                            <select name="hour" id="">
+                                <option value="Hour" selected hidden>Hour</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                            </select>
+                        </div>
+
+                        <div class="column-select">
+                            <select name="minute" id="">
+                                <option value="Minute" selected hidden>Minute</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                            </select>
+                        </div>
+
+                        <div class="column-select">
+                            <select name="am-pm" id="">
+                                <option value="AM/PM" selected hidden>AM/PM</option>
+                                <option value="AM">AM</option>
+                                <option value="PM">PM</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="set-alarm">
+                        <button class="alarm-btn" type="button">
+                            Set Alarm
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
 
 
     <!-- custom js link -->
     <script src="./js/main.js"></script>
 
 </body>
+
 </html>
