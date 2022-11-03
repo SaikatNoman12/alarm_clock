@@ -48,7 +48,7 @@ setInterval(() => {
         h = h - 12;
         amPm = 'PM';
     }
-    h = h === 0 ? h = 12 : h;
+    h = h === 0 ? 12 : h;
 
 
     h = h < 10 ? '0' + h : h;
